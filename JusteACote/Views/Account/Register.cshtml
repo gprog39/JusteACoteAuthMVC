@@ -1,14 +1,14 @@
 ﻿@model JusteACote.Models.RegisterViewModel
 @{
-    ViewBag.Title = "S’inscrire";
+    ViewBag.Title = "S’inscrire - nouveau client";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Créer un nouveau compte.</h4>
+    <h4>Vous n'êtes plus très loin de vos commerçants :)</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
