@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Boulangerie";
+}
+
+<h2>Boulangerie</h2>
+
+
+<table border=1>
+    <tr>
+        <th>Nom </th>
+        <th>Description </th>
+        <th>Masse </th>
+        <th>Prix </th>
+    </tr>
+    @foreach (var boulangerie in Model)
+    {
+        <tr>
+            <td>@boulangerie.Nom</td>
+            <td>@boulangerie.Description</td>
+            <td>@boulangerie.Masse</td>
+            <td>@boulangerie.Prix</td>
+        </tr>
+    }
+</table>
