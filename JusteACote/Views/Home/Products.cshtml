@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
@@ -9,6 +9,12 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
+@{
+    ViewBag.Title = "Produits";
+}
+
+<h2>Produits</h2>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -22,17 +28,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Qui sommes nous?", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Produits", "Products", "Home")</li>
+                    <li>@Html.ActionLink("Produits", "Products", "Index")</li>
+                    <li>@Html.ActionLink("Fruits", "Fruits", "Products")</li>
+                    <li>@Html.ActionLink("Légumes", "Legume", "Products")</li>
+                    <li>@Html.ActionLink("Boulangerie et pâtisserie", "Boulangerie", "Products")</li>
+                    <li>@Html.ActionLink("Boucherie et charcuterie", "Boucherie", "Products")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Juste à côté</p>
@@ -41,6 +48,6 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    
 </body>
 </html>

@@ -26,5 +26,12 @@ namespace JusteACote.Controllers
 
             return View();
         }
+
+        public ActionResult Products()
+        {
+            ViewBag.Message = "Produits";
+
+            return View();
+        }
     }
 }
